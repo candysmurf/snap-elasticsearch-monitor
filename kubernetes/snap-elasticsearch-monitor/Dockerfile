@@ -28,6 +28,7 @@ COPY grafana-datasource.json /etc/snap/grafana-datasource.json
 COPY snap-elasticsearch-dashboard.json /etc/snap/snap-elasticsearch-dashboard.json
 COPY snap-hardware-dashboard.json /etc/snap/snap-hardware-dashboard.json
 COPY init_grafana /usr/local/bin/init_grafana
+COPY install_snap /usr/local/bin/install_snap
 COPY create_tasks /usr/local/bin/create_tasks
 
 CMD ["sh", "-c", "/usr/local/bin/install_snap;  /usr/local/bin/init_grafana; /opt/snap/bin/snapd -t ${SNAP_TRUST_LEVEL} -l ${SNAP_LOG_LEVEL} -o /var/log/snap/"]
