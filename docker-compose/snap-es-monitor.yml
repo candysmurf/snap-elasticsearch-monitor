@@ -36,9 +36,13 @@ services:
       - influxdb
   snap-elasticsearch:
     image: elasticsearch:latest
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
     ports: 
       - "9200:9200"
   es-node:
     image: elasticsearch:latest
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
     depends_on:
       - snap-elasticsearch

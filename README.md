@@ -2,7 +2,7 @@
 
 This repository explores 2 different tools, docker-compose and kubernetes, to simplify monitoring the health of an Elasticsearch cluster. Both tools run an example of the [Snap Framework](https://github.com/intelsdi-x/snap) and the [Elasticsearch Collector Plugin](https://github.com/intelsdi-x/snap-plugin-collector-elasticsearch) that collects the health data of Elasticsearch nodes in a cluster. InfluxDB and Grafana are used to visualize the data collected.
 
-View blog post [Snap Elasticsearch Collector for Monitoring](https://medium.com/p/6dcb256bd63c/edit) for details. 
+View blog post [Snap Elasticsearch Collector for Monitoring](https://medium.com/intel-sdi/monitor-the-systems-you-love-on-kubernetes-6dcb256bd63c#.7eumolc6r) for details. 
 
 ## Run with docker-compose
 Prerequisite is having docker-machine and docker-compose installed.
