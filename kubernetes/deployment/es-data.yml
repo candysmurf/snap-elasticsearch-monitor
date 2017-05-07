@@ -17,3 +17,6 @@ spec:
       containers:
       - name: esdata
         image: elasticsearch:latest
+        env:
+        - name: ES_JAVA_OPTS
+          value: -Xms256m -Xmx256m

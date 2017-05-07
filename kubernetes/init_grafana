@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 set -u
-set -o pipefail
 
 while ! curl -sG "http://admin:admin@$MONITORING_GRAFANA_SERVICE_HOST:80" > /dev/null 2>&1; do
   sleep 1

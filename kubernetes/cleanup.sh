@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 kubectl delete deployments snap-elasticsearch --namespace kube-system
 kubectl delete rc es-data heapster influxdb-grafana --namespace kube-system
