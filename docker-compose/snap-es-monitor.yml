@@ -1,7 +1,6 @@
 version: '2'
 services:
   main:
-    #build: ./snap-elasticsearch-monitor
     image: candysmurfhub/snap-es-mon-docker:latest
     container_name: snap-elasticsearch-monitor
     environment:
@@ -27,7 +26,7 @@ services:
       - PRE_CREATE_DB=k8s
   grafana:
     container_name: grafana
-    image: grafana/grafana:latest
+    image: grafana/grafana
     ports:
       - "3000:3000"
     expose:
@@ -35,13 +34,13 @@ services:
     depends_on:
       - influxdb
   snap-elasticsearch:
-    image: elasticsearch:latest
+    image: elasticsearch:2.4.4
     environment:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
     ports: 
       - "9200:9200"
   es-node:
-    image: elasticsearch:latest
+    image: elasticsearch:2.4.4
     environment:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
     depends_on:
